@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Doodle Classifier</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+    <script src="loadbinary.js"></script>
+    <script src="dataprep.js"></script>
+    <script src="traintest.js"></script>
+    <script src="sketch.js"></script>
+    <script src="libraries/nn.js"></script>
+    <script src="libraries/matrix.js"></script>
+
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Doodle Classifier with 5 Classes</h1>
+      <p>A doodle classifier (CNN) trained on 5 classes from <a href="https://quickdraw.withgoogle.com/data" target="_blank">Quickdraw dataset</a></p>
+
+      <div class="button-container">
+        <button id="train">Train</button>
+        <button id="test">Test</button>
+        <button id="guess">Guess</button>
+        <button id="clear">Clear</button>
+      </div>
+
+      <div id="grid">
+        <div id="canvasContainer"></div>
+        <h3 id="res"></h3>
+      </div>
+
+      <p class="object-list">
+        A list of objects it can guess: <br>
+        Donut, Headphones, Apple, Skull, Tractor
+      </p>
+
+      <footer>
+        <div class="footer-line"></div>
+        This site is inspired by Daniel Shiffman's Doodle Classification from The Coding Train.
+      </footer>
+    </div>
+  </body>
+</html>
